@@ -28,7 +28,7 @@ export const Navbar = () => {
                 <a href="#" className="text-white hover:text-gray-300">
                   Contact
                 </a>
-                <a href="#" className="text-white hover:text-gray-300">
+                <a href="/signin" className="text-white hover:text-gray-300">
                   Login
                 </a>
               </div>
