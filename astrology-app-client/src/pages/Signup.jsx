@@ -71,7 +71,7 @@ export default function Signup() {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const response = await fetch(`${backendUrl}/api/users/submit-form`, {
+        const response = await fetch(`${backendUrl}/api/users/signup`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(form),
