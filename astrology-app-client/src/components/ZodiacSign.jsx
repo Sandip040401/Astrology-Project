@@ -13,23 +13,24 @@ import capricorn from '../assets/zodiac/capricorn.png';
 import aquarius from '../assets/zodiac/aquarius.png';
 import pisces from '../assets/zodiac/pisces.png';
 
-
 const Card = ({ image, title, description }) => {
   return (
-    <div className="bg-transparent border border-gray-300 shadow-lg rounded-lg p-4 m-2 flex flex-col items-center transition-transform transform hover:scale-105" style={{ width: '200px' }}>
+    <div className="bg-transparent border border-gray-300 shadow-lg rounded-lg p-6 m-4 flex flex-col items-center transition-transform transform hover:scale-105 duration-300" style={{ width: '200px' }}>
       <img src={image} alt={title} className="w-24 h-24 mb-4 opacity-75 invert"/>
-      <h2 className="text-xl font-bold mb-2">{title}</h2>
-      <p className="text-gray-600 text-center">{description}</p>
+      <h2 className="text-xl font-bold mb-2 text-white">{title}</h2>
+      <p className="text-gray-400 text-center">{description}</p>
     </div>
   );
 };
 
 const ZodiacSign = () => {
   return (
-    <div className="p-2 bg-gradient-to-r from-gray-900 to-black text-white">
-      <h4 className="text-xl font-bold text-center mb-4">Zodiac Sing</h4>
-      <h1 className="text-5xl font-bold text-center mb-4">Know Yourself Through Your Sign</h1>
-      <p  className=" text-center mb-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda nemo delectus voluptatibus saepe dignissimos?</p>
+    <div className="p-6 bg-gradient-to-r from-gray-900 to-black text-white">
+      <h4 className="text-xl font-bold text-center mb-2">Zodiac Sign</h4>
+      <h1 className="text-5xl font-bold text-center mb-6">Know Yourself Through Your Sign</h1>
+      <p className="text-center mb-8 max-w-2xl mx-auto">
+        Discover the mysteries of the zodiac and how your star sign influences your personality, relationships, and life path. Explore the unique characteristics of each sign and gain insights into your own traits and tendencies.
+      </p>
       <div className="flex justify-center flex-wrap">
         <Card 
           image={aries} 
@@ -39,16 +40,17 @@ const ZodiacSign = () => {
         <Card 
           image={taurus} 
           title="Taurus" 
-          description="APr 20 - May 20" 
+          description="Apr 20 - May 20" 
         />
         <Card 
           image={gemini} 
           title="Gemini" 
-          description="May 21 - Jun 21" 
-        /><Card 
+          description="May 21 - Jun 20" 
+        />
+        <Card 
           image={cancer} 
           title="Cancer" 
-          description="jun 21 - Jul 22" 
+          description="Jun 21 - Jul 22" 
         />
         <Card 
           image={leo} 
@@ -63,7 +65,7 @@ const ZodiacSign = () => {
         <Card 
           image={libra} 
           title="Libra" 
-          description="Sep 23 - Oct 222" 
+          description="Sep 23 - Oct 22" 
         />
         <Card 
           image={scorpio} 
@@ -78,7 +80,7 @@ const ZodiacSign = () => {
         <Card 
           image={capricorn} 
           title="Capricorn" 
-          description="Dec 22 -Jan 19" 
+          description="Dec 22 - Jan 19" 
         />
         <Card 
           image={aquarius} 
