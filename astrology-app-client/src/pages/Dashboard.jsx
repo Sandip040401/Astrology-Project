@@ -1,7 +1,8 @@
-import React, { useState, createContext } from 'react';
+import React, { useState } from 'react';
 import Sidebar from '../components/Sidebar';
-import Profile from '../components/Profile'; // Assuming Profile is a component
-import DailyHoroscope from '../components/DailyHoroscope'; // Import the Horoscope component
+import Profile from '../components/Profile'; 
+import DailyHoroscope from '../components/DailyHoroscope';
+import ZodiacCompatibility from '../components/ZodiacCompatibility';
 import { DashboardContext } from '../DashboardContext';
 
 const Dashboard = () => {
@@ -12,7 +13,9 @@ const Dashboard = () => {
       case 'Profile':
         return <Profile />;
       case 'Horoscope':
-        return <DailyHoroscope />; // Render Horoscope component
+        return <DailyHoroscope />;
+      case 'ZodiacCompatibility':
+        return <ZodiacCompatibility />;
       default:
         return <Profile />;
     }
@@ -20,9 +23,12 @@ const Dashboard = () => {
 
   return (
     <DashboardContext.Provider value={{ activeComponent, setActiveComponent }}>
-      <div className="flex h-screen">
-        <Sidebar className="h-full overflow-y-auto" />
-        <div className="flex-1 p-6 bg-gray-100 overflow-y-auto">
+      <div className="flex h-screen bg-gray-900">
+        {/* Sidebar */}
+        <Sidebar />
+
+        {/* Main content area */}
+        <div className="flex-1 min-w-[800px] p-6 bg-gray-800 border-l border-gray-700 overflow-y-auto">
           {renderComponent()}
         </div>
       </div>

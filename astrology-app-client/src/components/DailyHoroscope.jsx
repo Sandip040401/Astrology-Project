@@ -47,8 +47,8 @@ const DailyHoroscope = () => {
   }, []);
 
   const fetchHoroscope = async () => {
-    setIsLoading(true); // Set loading state to true
-    setError(''); // Reset any previous errors
+    setIsLoading(true);
+    setError('');
     try {
       if (!userData) throw new Error('User data is not available');
 
@@ -82,12 +82,12 @@ const DailyHoroscope = () => {
     } catch (err) {
       setError(err.response?.data?.message || 'Failed to fetch horoscope');
     } finally {
-      setIsLoading(false); // Set loading state to false
+      setIsLoading(false);
     }
   };
 
   return (
-    <div className="flex flex-col items-center p-6 bg-gray-100 min-h-screen">
+    <div className="flex flex-col items-center p-6 bg-gray-800 min-h-screen text-white">
       <ToastContainer
         position="top-right"
         autoClose={5000}
@@ -99,31 +99,33 @@ const DailyHoroscope = () => {
         draggable
         pauseOnHover
       />
-      <h1 className="text-3xl font-extrabold text-gray-900 mb-6">Daily Horoscope</h1>
-      <button
-        onClick={fetchHoroscope}
-        className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
-        disabled={isLoading}
-      >
-        {isLoading ? 'Loading...' : 'Get Daily Horoscope'}
-      </button>
-      {isLoading && (
-        <div className="mt-4">
-          <RingLoader size={50} color="#3498db" loading={isLoading} />
-        </div>
-      )}
-      {horoscope && (
-        <div className="mt-6 w-full max-w-3xl p-6 bg-white rounded-lg shadow-md border border-gray-200">
-          <h2 className="text-xl font-semibold mb-4 text-gray-800">Today's Horoscope</h2>
-          <p className="text-lg text-gray-700">{horoscope}</p>
-        </div>
-      )}
-      {error && (
-        <div className="mt-6 w-full max-w-3xl p-6 bg-red-100 border border-red-300 rounded-lg">
-          <h2 className="text-xl font-semibold text-red-700">Error</h2>
-          <p className="text-lg text-red-600">{error}</p>
-        </div>
-      )}
+      <div className="w-full max-w-lg p-8 bg-gray-900 rounded-lg shadow-2xl shadow-gray-500 border border-gray-700">
+        <h1 className="text-3xl font-extrabold mb-6">Daily Horoscope</h1>
+        <button
+          onClick={fetchHoroscope}
+          className="w-full px-6 py-3 bg-white text-black rounded-lg shadow-md hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-white transition"
+          disabled={isLoading}
+        >
+          {isLoading ? 'Loading...' : 'Get Daily Horoscope'}
+        </button>
+        {isLoading && (
+          <div className="mt-4 flex justify-center">
+            <RingLoader size={50} color="#ffffff" loading={isLoading} />
+          </div>
+        )}
+        {horoscope && (
+          <div className="mt-6 p-6 bg-gray-800 rounded-lg shadow-md border border-gray-700">
+            <h2 className="text-lg font-semibold mb-2">Today's Horoscope</h2>
+            <p className="text-sm">{horoscope}</p>
+          </div>
+        )}
+        {error && (
+          <div className="mt-6 p-6 bg-gray-700 border border-gray-600 rounded-lg shadow-md">
+            <h2 className="text-lg font-semibold text-red-300 mb-2">Error</h2>
+            <p className="text-sm text-red-200">{error}</p>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

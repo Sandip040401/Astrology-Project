@@ -1,4 +1,3 @@
-// server.js
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
@@ -7,6 +6,7 @@ import cors from 'cors';
 import userRoutes from './routes/userRoutes.js';
 import profileRoutes from './routes/profileRoutes.js';
 import horoscopeRoutes from './routes/horoscopeRoutes.js'; // Import horoscope routes
+import compatibilityRoutes from './routes/compatibilityRoutes.js'; // Import compatibility routes
 
 dotenv.config();
 
@@ -21,6 +21,7 @@ app.use(cors());
 app.use('/api/users', userRoutes);
 app.use('/api/profile', profileRoutes);
 app.use('/api/horoscope', horoscopeRoutes); // Use horoscope routes
+app.use('/api/compatibility', compatibilityRoutes); // Use compatibility routes
 
 // MongoDB Connection
 mongoose.connect(process.env.MONGODB_URI)

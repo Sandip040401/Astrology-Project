@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { FaUser, FaSignOutAlt, FaStar } from 'react-icons/fa';
+import { FaUser, FaSignOutAlt, FaStar, FaHeart } from 'react-icons/fa'; // Import the icons
 import { DashboardContext } from '../DashboardContext';
 
 const Sidebar = () => {
@@ -11,34 +11,43 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="h-full w-64 bg-gray-900 text-white flex flex-col p-4">
-      <h2 className="text-3xl font-bold mb-8 text-center">Dashboard</h2>
+    <div className="w-72 bg-gray-800 text-white flex flex-col p-6 border-r border-gray-700">
+      <h2 className="text-2xl font-bold mb-6 text-center text-gray-300">Dashboard</h2>
       <ul className="space-y-4">
         <li>
           <button
             onClick={() => setActiveComponent('Horoscope')}
-            className="flex items-center w-full text-left px-4 py-2 hover:bg-gray-700 rounded-md transition"
+            className="flex items-center w-full text-left px-4 py-2 rounded-md transition-colors hover:bg-gray-700 active:bg-gray-600"
           >
-            <FaStar className="mr-2" />
-            Daily Horoscope
+            <FaStar className="mr-3 text-gray-400 text-xl" />
+            <span className="text-lg font-medium">Daily Horoscope</span>
           </button>
         </li>
         <li>
           <button
             onClick={() => setActiveComponent('Profile')}
-            className="flex items-center w-full text-left px-4 py-2 hover:bg-gray-700 rounded-md transition"
+            className="flex items-center w-full text-left px-4 py-2 rounded-md transition-colors hover:bg-gray-700 active:bg-gray-600"
           >
-            <FaUser className="mr-2" />
-            Profile
+            <FaUser className="mr-3 text-gray-400 text-xl" />
+            <span className="text-lg font-medium">Profile</span>
           </button>
         </li>
         <li>
-          <button 
-            onClick={handleLogout} 
-            className="flex items-center w-full text-left px-4 py-2 hover:bg-gray-700 rounded-md transition"
+          <button
+            onClick={() => setActiveComponent('ZodiacCompatibility')}
+            className="flex items-center w-full text-left px-4 py-2 rounded-md transition-colors hover:bg-gray-700 active:bg-gray-600"
           >
-            <FaSignOutAlt className="mr-2" />
-            Logout
+            <FaHeart className="mr-3 text-gray-400 text-xl" />
+            <span className="text-lg font-medium">Zodiac Compatibility</span>
+          </button>
+        </li>
+        <li>
+          <button
+            onClick={handleLogout}
+            className="flex items-center w-full text-left px-4 py-2 rounded-md transition-colors hover:bg-gray-700 active:bg-gray-600"
+          >
+            <FaSignOutAlt className="mr-3 text-gray-400 text-xl" />
+            <span className="text-lg font-medium">Logout</span>
           </button>
         </li>
       </ul>
