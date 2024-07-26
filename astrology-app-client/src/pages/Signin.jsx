@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import background from '../assets/background.jpg';
 import 'react-toastify/dist/ReactToastify.css';
 
 export default function Signin() {
@@ -41,7 +42,7 @@ export default function Signin() {
         window.location.href = '/'; // Replace with your desired URL
       } else {
         const error = await response.text();
-        toast.error(`Invalid email or password`);
+        toast.error('Invalid email or password');
       }
     } catch (error) {
       toast.error('An error occurred. Please try again.');
@@ -51,20 +52,23 @@ export default function Signin() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
-    <ToastContainer position="top-right" autoClose={5000} hideProgressBar={false} newestOnTop closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover />
-      <div className="w-full max-w-md p-8 space-y-8 bg-white shadow-lg rounded-lg">
-        <h2 className="text-2xl font-bold text-center">Sign In</h2>
+    <div
+      className="flex items-center justify-center min-h-screen bg-cover bg-center"
+      style={{ backgroundImage: `url(${background})` }}
+    >
+      <ToastContainer position="top-right" autoClose={5000} hideProgressBar={false} newestOnTop closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover />
+      <div className="w-full max-w-md p-8 space-y-8 bg-white shadow-lg rounded-lg bg-opacity-5 backdrop-blur-sm">
+        <h2 className="text-2xl font-bold text-white text-center">Sign In</h2>
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+            <label htmlFor="email" className="block text-sm font-medium text-white">
               Email
             </label>
             <input
               type="email"
               id="email"
               name="email"
-              placeholder='example@gmail.com'
+              placeholder="example@gmail.com"
               value={form.email}
               onChange={handleChange}
               className="w-full px-3 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
@@ -72,14 +76,14 @@ export default function Signin() {
             />
           </div>
           <div>
-            <label htmlFor="password" className="block text-sm font-medium text-gray-700">
+            <label htmlFor="password" className="block text-sm font-medium text-white">
               Password
             </label>
             <div className="relative">
               <input
                 type={showPassword ? 'text' : 'password'}
                 id="password"
-                placeholder='Enter Password'
+                placeholder="Enter Password"
                 name="password"
                 value={form.password}
                 onChange={handleChange}
@@ -106,9 +110,9 @@ export default function Signin() {
           </div>
         </form>
         <div className="text-center">
-          <p className="text-sm text-gray-600">
+          <p className="text-sm text-white">
             Don't have an account?{' '}
-            <Link to="/signup" className="font-medium text-indigo-600 hover:text-indigo-500">
+            <Link to="/signup" className="font-medium text-blue-500 hover:text-indigo-950">
               Sign Up
             </Link>
           </p>
