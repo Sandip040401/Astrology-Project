@@ -54,6 +54,8 @@ export default function Signin() {
   };
 
   return (
+    <>
+    <Navbar/>
     <div
       className="flex items-center justify-center min-h-screen bg-cover bg-center"
       style={{ backgroundImage: `url(${background})` }}
@@ -71,7 +73,6 @@ export default function Signin() {
               id="email"
               name="email"
               placeholder="example@gmail.com"
-              placeholder="example@gmail.com"
               value={form.email}
               onChange={handleChange}
               className="w-full px-3 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 transition duration-150 ease-in-out"
@@ -86,7 +87,6 @@ export default function Signin() {
               <input
                 type={showPassword ? 'text' : 'password'}
                 id="password"
-                placeholder="Enter Password"
                 placeholder="Enter Password"
                 name="password"
                 value={form.password}

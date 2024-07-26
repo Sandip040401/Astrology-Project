@@ -99,7 +99,9 @@ export default function Signup() {
   };
 
   return (
-    <div
+    <>
+    <Navbar/>
+        <div
       className="flex items-center justify-center min-h-screen bg-cover bg-center py-20"
       style={{ backgroundImage: `url(${background})` }}
     >
@@ -294,6 +296,9 @@ export default function Signup() {
           </p>
         </form>
       </div>
-    </div>
+        </div>
+        <Footer/>
+    </>
+
   );
 }
