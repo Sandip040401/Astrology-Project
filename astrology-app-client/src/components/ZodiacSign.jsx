@@ -25,7 +25,7 @@ const Card = ({ image, title, description }) => {
 
 const ZodiacSign = () => {
   return (
-    <div className="p-6 bg-gradient-to-r from-gray-900 to-black text-white">
+    <div className="p-6 bg-gradient-to-r from-gray-900 to-black text-white"style={{fontFamily: "Kanit, sans-serif"}}>
       <h4 className="text-xl font-bold text-center mb-2">Zodiac Sign</h4>
       <h1 className="text-5xl font-bold text-center mb-6">Know Yourself Through Your Sign</h1>
       <p className="text-center mb-8 max-w-2xl mx-auto">

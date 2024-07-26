@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import 'react-toastify/dist/ReactToastify.css';
+import { Navbar } from '../components/Navbar';
+import { Footer } from '../components/Footer';
 
 export default function Signin() {
   const [form, setForm] = useState({
@@ -51,39 +53,41 @@ export default function Signin() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
-    <ToastContainer position="top-right" autoClose={5000} hideProgressBar={false} newestOnTop closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover />
-      <div className="w-full max-w-md p-8 space-y-8 bg-white shadow-lg rounded-lg">
-        <h2 className="text-2xl font-bold text-center">Sign In</h2>
+    <>
+    <Navbar/>
+    <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-gray-900 to-black">
+      <ToastContainer position="top-right" autoClose={5000} hideProgressBar={false} newestOnTop closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover />
+      <div className="w-full max-w-md p-8 space-y-8 bg-white shadow-2xl rounded-lg transition-transform transform hover:scale-105 bg-gradient-to-r from-gray-500 to-black">
+        <h2 className="text-3xl font-extrabold text-center text-gray-200" style={{fontFamily: "Kanit, sans-serif"}}>Sign In</h2>
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+            <label htmlFor="email" className="block text-sm font-medium text-gray-200">
               Email
             </label>
             <input
               type="email"
               id="email"
               name="email"
-              placeholder='example@gmail.com'
+              placeholder="example@gmail.com"
               value={form.email}
               onChange={handleChange}
-              className="w-full px-3 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+              className="w-full px-3 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 transition duration-150 ease-in-out"
               required
             />
           </div>
           <div>
-            <label htmlFor="password" className="block text-sm font-medium text-gray-700">
+            <label htmlFor="password" className="block text-sm font-medium text-gray-200">
               Password
             </label>
             <div className="relative">
               <input
                 type={showPassword ? 'text' : 'password'}
                 id="password"
-                placeholder='Enter Password'
+                placeholder="Enter Password"
                 name="password"
                 value={form.password}
                 onChange={handleChange}
-                className="w-full px-3 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                className="w-full px-3 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 transition duration-150 ease-in-out"
                 required
               />
               <button
@@ -98,7 +102,7 @@ export default function Signin() {
           <div>
             <button
               type="submit"
-              className="w-full px-4 py-2 font-medium text-white bg-indigo-600 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              className="w-full px-4 py-2 font-semibold text-white bg-indigo-600 rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-150 ease-in-out"
               disabled={isSubmitting}
             >
               {isSubmitting ? 'Signing in...' : 'Sign In'}
@@ -106,14 +110,16 @@ export default function Signin() {
           </div>
         </form>
         <div className="text-center">
-          <p className="text-sm text-gray-600">
+          <p className="text-sm text-gray-200">
             Don't have an account?{' '}
-            <Link to="/signup" className="font-medium text-indigo-600 hover:text-indigo-500">
+            <Link to="/signup" className="font-medium text-indigo-600 hover:text-indigo-500 transition duration-150 ease-in-out">
               Sign Up
             </Link>
           </p>
         </div>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 }
