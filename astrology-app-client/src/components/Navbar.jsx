@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 const navigation = [
   { name: 'Home', href: '/', current: false },
   { name: 'About', href: '/about', current: false },
-  { name: 'Services', href: '/services', current: false },
+  { name: 'Services', href: '/Services', current: false },
   { name: 'Contact', href: '/contact', current: false },
 ];
 
@@ -51,7 +51,7 @@ export const Navbar = () => {
                 src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
                 className="h-8 w-auto"
               /> */}
-              <Link to='/'><p className='text-white text-xl cursor-pointer'>Astrology</p></Link>
+              <Link to='/'><p className='text-white text-xl cursor-pointer' style={{fontFamily: "Kanit, sans-serif"}}>Astrology</p></Link>
             </div>
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">

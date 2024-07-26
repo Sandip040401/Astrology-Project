@@ -3,6 +3,7 @@ import './App.css';
 import Home from './pages/Home';
 import Signin from './pages/Signin';
 import Signup from './pages/Signup';
+import Services from './components/Services';
 import { ContactUs } from './components/ContactUs';
 import Dashboard from './pages/Dashboard'; // Import your Dashboard component
 import ProtectedRoute from './components/ProtectedRoute';
@@ -17,6 +18,7 @@ function App() {
           <Route path='/signin' element={<Signin />} />
           <Route path='/signup' element={<Signup />} />
           <Route path='/contact' element={<ContactUs />} />
+          <Route path='/Services' element={<Services />} />
           <Route 
             path='/dashboard' 
             element={

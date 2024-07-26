@@ -4,6 +4,8 @@ import { toast, ToastContainer } from 'react-toastify';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import background from '../assets/background.jpg';
 import 'react-toastify/dist/ReactToastify.css';
+import { Navbar } from '../components/Navbar';
+import { Footer } from '../components/Footer';
 
 export default function Signin() {
   const [form, setForm] = useState({
@@ -69,9 +71,10 @@ export default function Signin() {
               id="email"
               name="email"
               placeholder="example@gmail.com"
+              placeholder="example@gmail.com"
               value={form.email}
               onChange={handleChange}
-              className="w-full px-3 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+              className="w-full px-3 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 transition duration-150 ease-in-out"
               required
             />
           </div>
@@ -84,10 +87,11 @@ export default function Signin() {
                 type={showPassword ? 'text' : 'password'}
                 id="password"
                 placeholder="Enter Password"
+                placeholder="Enter Password"
                 name="password"
                 value={form.password}
                 onChange={handleChange}
-                className="w-full px-3 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                className="w-full px-3 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 transition duration-150 ease-in-out"
                 required
               />
               <button
@@ -102,7 +106,7 @@ export default function Signin() {
           <div>
             <button
               type="submit"
-              className="w-full px-4 py-2 font-medium text-white bg-indigo-600 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              className="w-full px-4 py-2 font-semibold text-white bg-indigo-600 rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-150 ease-in-out"
               disabled={isSubmitting}
             >
               {isSubmitting ? 'Signing in...' : 'Sign In'}
@@ -119,5 +123,7 @@ export default function Signin() {
         </div>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 }

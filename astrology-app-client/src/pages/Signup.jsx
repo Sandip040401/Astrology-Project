@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import background from '../assets/background.jpg';
 import 'react-toastify/dist/ReactToastify.css';
+import { Navbar } from '../components/Navbar';
+import { Footer } from '../components/Footer';
 
 export default function Signup() {
   const [form, setForm] = useState({
