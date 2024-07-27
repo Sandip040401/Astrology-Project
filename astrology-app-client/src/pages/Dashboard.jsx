@@ -4,6 +4,7 @@ import Profile from '../components/Profile';
 import DailyHoroscope from '../components/DailyHoroscope';
 import ZodiacCompatibility from '../components/ZodiacCompatibility';
 import { DashboardContext } from '../DashboardContext';
+import {Navbar} from '../components/Navbar';
 
 const Dashboard = () => {
   const [activeComponent, setActiveComponent] = useState('Profile');
@@ -22,7 +23,9 @@ const Dashboard = () => {
   };
 
   return (
-    <DashboardContext.Provider value={{ activeComponent, setActiveComponent }}>
+    <>
+    <Navbar/>
+        <DashboardContext.Provider value={{ activeComponent, setActiveComponent }}>
       <div className="flex h-screen bg-gray-900">
         {/* Sidebar */}
         <Sidebar />
@@ -33,6 +36,8 @@ const Dashboard = () => {
         </div>
       </div>
     </DashboardContext.Provider>
+    </>
+
   );
 };
 

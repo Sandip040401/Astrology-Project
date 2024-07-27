@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
-import background from '../assets/background.jpg';
 import 'react-toastify/dist/ReactToastify.css';
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
@@ -44,7 +43,7 @@ export default function Signin() {
         window.location.href = '/'; // Replace with your desired URL
       } else {
         const error = await response.text();
-        toast.error('Invalid email or password');
+        toast.error(`Invalid email or password`);
       }
     } catch (error) {
       toast.error('An error occurred. Please try again.');
@@ -56,16 +55,13 @@ export default function Signin() {
   return (
     <>
     <Navbar/>
-    <div
-      className="flex items-center justify-center min-h-screen bg-cover bg-center"
-      style={{ backgroundImage: `url(${background})` }}
-    >
+    <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-gray-900 to-black">
       <ToastContainer position="top-right" autoClose={5000} hideProgressBar={false} newestOnTop closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover />
-      <div className="w-full max-w-md p-8 space-y-8 bg-white shadow-lg rounded-lg bg-opacity-5 backdrop-blur-sm">
-        <h2 className="text-2xl font-bold text-white text-center">Sign In</h2>
+      <div className="w-full max-w-md p-8 space-y-8 bg-white shadow-2xl rounded-lg transition-transform transform hover:scale-105 bg-gradient-to-r from-gray-500 to-black">
+        <h2 className="text-3xl font-extrabold text-center text-gray-200" style={{fontFamily: "Kanit, sans-serif"}}>Sign In</h2>
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-white">
+            <label htmlFor="email" className="block text-sm font-medium text-gray-200">
               Email
             </label>
             <input
@@ -80,7 +76,7 @@ export default function Signin() {
             />
           </div>
           <div>
-            <label htmlFor="password" className="block text-sm font-medium text-white">
+            <label htmlFor="password" className="block text-sm font-medium text-gray-200">
               Password
             </label>
             <div className="relative">
@@ -114,9 +110,9 @@ export default function Signin() {
           </div>
         </form>
         <div className="text-center">
-          <p className="text-sm text-white">
+          <p className="text-sm text-gray-200">
             Don't have an account?{' '}
-            <Link to="/signup" className="font-medium text-blue-500 hover:text-indigo-950">
+            <Link to="/signup" className="font-medium text-indigo-600 hover:text-indigo-500 transition duration-150 ease-in-out">
               Sign Up
             </Link>
           </p>
