@@ -40,7 +40,7 @@ export default function Signin() {
         localStorage.setItem('token', token);
         toast.success('Sign-in successful!');
         // Redirect to plans page
-        window.location.href = '/'; // Replace with your desired URL
+        window.location.href = '/dashboard'; // Replace with your desired URL
       } else {
         const error = await response.text();
         toast.error(`Invalid email or password`);
@@ -109,14 +109,14 @@ export default function Signin() {
             </button>
           </div>
         </form>
-        <div className="text-center">
+        {/* <div className="text-center">
           <p className="text-sm text-gray-200">
             Don't have an account?{' '}
             <Link to="/signup" className="font-medium text-indigo-600 hover:text-indigo-500 transition duration-150 ease-in-out">
               Sign Up
             </Link>
           </p>
-        </div>
+        </div> */}
       </div>
     </div>
     <Footer/>

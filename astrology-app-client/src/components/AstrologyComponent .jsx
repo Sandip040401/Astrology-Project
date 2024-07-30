@@ -13,7 +13,7 @@ const AstrologyComponent = () => {
           Welcome to Astrology, where the universe meets your personal journey. Dive into the stars with our daily horoscopes, personalized birth charts, and expert astrology readings. Whether you're seeking guidance or a deeper connection to your celestial self, our platform offers insightful and tailored astrological experiences to illuminate your path. Join us and let the cosmos guide you toward a more enlightened and harmonious life.
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
-          <Link to='/signin'><button className="bg-blue-500 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300">
+          <Link to='/'><button className="bg-blue-500 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300">
             Getting Started
           </button></Link>
           <button className="bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-green-700 transition duration-300">

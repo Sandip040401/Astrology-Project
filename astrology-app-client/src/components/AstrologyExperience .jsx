@@ -12,26 +12,29 @@ const AstrologyExperience = () => {
         <p className="mt-4 text-gray-300">
           Discover the ancient wisdom of astrology and unlock the secrets of your future. Our expert astrologers provide insights into your life path, helping you navigate your journey with confidence and clarity.
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 mt-6">
-          <p className="flex justify-start items-center text-indigo-300">
-            <span className="w-3 h-3 bg-indigo-300 rounded-full mr-2"></span> Vastu Shastra
-          </p>
-          <p className="flex justify-start items-center text-indigo-300">
-            <span className="w-3 h-3 bg-indigo-300 rounded-full mr-2"></span> Manglik Dosha
-          </p>
-          <p className="flex justify-start items-center text-indigo-300">
-            <span className="w-3 h-3 bg-indigo-300 rounded-full mr-2"></span> Birth Journal
-          </p>
-          <p className="flex justify-start items-center text-indigo-300">
-            <span className="w-3 h-3 bg-indigo-300 rounded-full mr-2"></span> Tarot Reading
-          </p>
-          <p className="flex justify-start items-center text-indigo-300">
-            <span className="w-3 h-3 bg-indigo-300 rounded-full mr-2"></span> Palm Reading
-          </p>
-          <p className="flex justify-start items-center text-indigo-300">
-            <span className="w-3 h-3 bg-indigo-300 rounded-full mr-2"></span> Crystal Ball
-          </p>
+        <div className='flex justify-center'>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+              <p className="flex justify-start items-center text-indigo-300">
+                <span className="w-3 h-3 bg-indigo-300 rounded-full mr-2"></span> Vastu Shastra
+              </p>
+              <p className="flex justify-start items-center text-indigo-300">
+                <span className="w-3 h-3 bg-indigo-300 rounded-full mr-2"></span> Manglik Dosha
+              </p>
+              <p className="flex justify-start items-center text-indigo-300">
+                <span className="w-3 h-3 bg-indigo-300 rounded-full mr-2"></span> Birth Journal
+              </p>
+              <p className="flex justify-start items-center text-indigo-300">
+                <span className="w-3 h-3 bg-indigo-300 rounded-full mr-2"></span> Tarot Reading
+              </p>
+              <p className="flex justify-start items-center text-indigo-300">
+                <span className="w-3 h-3 bg-indigo-300 rounded-full mr-2"></span> Palm Reading
+              </p>
+              <p className="flex justify-start items-center text-indigo-300">
+                <span className="w-3 h-3 bg-indigo-300 rounded-full mr-2"></span> Crystal Ball
+              </p>
+            </div>
         </div>
+
         <button className="mt-10 bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-full transition duration-300">
           Read More
         </button>
