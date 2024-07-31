@@ -36,7 +36,7 @@ const ZodiacForm = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center min-h-screen bg-gradient-to-r from-gray-900 to-black text-white p-10">
+    <div className="flex flex-col md:flex-row items-center justify-center min-h-screen bg-gradient-to-r from-gray-900 to-black text-white ">
       <div className="w-full md:w-1/2 p-8">
         <h1 className="text-4xl font-bold mb-6">Know Your Zodiac Sign</h1>
         <form onSubmit={handleSubmit} className="space-y-6">
