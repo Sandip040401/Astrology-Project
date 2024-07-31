@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { FaSignOutAlt, FaStar, FaHeart, FaChartLine, FaMoon, FaSun } from 'react-icons/fa'; // Import the icons
+import { FaSignOutAlt, FaStar, FaHeart, FaChartLine, FaLanguage, FaMoon, FaSun } from 'react-icons/fa'; // Import the icons
 import { DashboardContext } from '../DashboardContext';
 
 const Sidebar = () => {
@@ -40,15 +40,7 @@ const Sidebar = () => {
             <span className="text-lg font-medium">Kundli Matching</span>
           </button>
         </li>
-        {/* <li>
-          <button
-            onClick={toggleTheme}
-            className={`flex items-center w-full text-left px-4 py-2 rounded-md transition-colors ${theme === 'dark' ? 'hover:bg-gray-700 active:bg-gray-600' : 'hover:bg-gray-200 active:bg-gray-300'}`}
-          >
-            {theme === 'dark' ? <FaSun className="mr-3 text-xl" /> : <FaMoon className="mr-3 text-xl" />}
-            <span className="text-lg font-medium">Toggle Theme</span>
-          </button>
-        </li> */}
+
         <li>
           <button
             onClick={handleLogout}
