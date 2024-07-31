@@ -20,6 +20,7 @@ export const Navbar = () => {
   useEffect(() => {
     const token = localStorage.getItem('token');
     setIsAuthenticated(!!token);
+
   }, []);
 
   return (
@@ -35,7 +36,7 @@ export const Navbar = () => {
           </div>
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex flex-shrink-0 items-center">
-              <Link to="/home" className="text-white text-xl font-bold">
+              <Link to="/home" className="text-white text-xl"style={{ fontFamily: "Kanit, sans-serif" }}>
                 Astrology
               </Link>
             </div>
@@ -56,7 +57,9 @@ export const Navbar = () => {
               </div>
             </div>
           </div>
-          <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+          <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 space-x-4">
+            {/* Google Translate Element */}
+            <div id="google_translate_element" className="translate-box"></div>
             {isAuthenticated ? (
               <Link to="/dashboard">
                 <button
@@ -78,6 +81,7 @@ export const Navbar = () => {
             )}
           </div>
         </div>
+        
       </div>
 
       <Disclosure.Panel className="sm:hidden">
@@ -100,3 +104,39 @@ export const Navbar = () => {
     </Disclosure>
   );
 };
+
+// Custom styles for the translate box
+const style = document.createElement('style');
+style.innerHTML = `
+  .translate-box .goog-te-gadget-simple {
+    background-color: #4a5568;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+  }
+  .translate-box .goog-te-gadget-simple .goog-te-menu-value span {
+    color: white;
+  }
+  .translate-box .goog-te-gadget-simple .goog-te-menu-value span:after {
+    content: '▼';
+    padding-left: 5px;
+  }
+  .translate-box .goog-te-gadget-simple:hover {
+    background-color: #2d3748;
+  }
+  .translate-box .goog-te-menu-frame {
+    border: none;
+    box-shadow: none;
+  }
+  .translate-box .goog-te-menu2 {
+    background-color: #4a5568;
+    color: white;
+  }
+  @media (max-width: 640px) {
+    .translate-box {
+      display: none;
+    }
+  }
+`;
+document.head.appendChild(style);
