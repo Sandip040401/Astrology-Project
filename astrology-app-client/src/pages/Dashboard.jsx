@@ -8,10 +8,10 @@ import { Navbar } from '../components/Navbar';
 
 const Dashboard = () => {
   const [activeComponent, setActiveComponent] = useState('ZodiacCompatibility');
-  const [theme, setTheme] = useState('dark'); // Initialize theme state
+  const [theme, setTheme] = useState('colorful'); // Initialize theme state to colorful
 
   const toggleTheme = () => {
-    setTheme(prevTheme => (prevTheme === 'dark' ? 'light' : 'dark'));
+    setTheme(prevTheme => (prevTheme === 'colorful' ? 'light' : 'colorful'));
   };
 
   const renderComponent = () => {
@@ -29,17 +29,17 @@ const Dashboard = () => {
 
   return (
     <>
-      <Navbar/>
+      {/* <Navbar/> */}
+
         <DashboardContext.Provider value={{ activeComponent, setActiveComponent, theme, toggleTheme }}>
-          <div className={`flex h-screen ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-100'}`}>
+          <div className={`flex h-screen ${theme === 'colorful' ? 'bg-gradient-to-r from-purple-400 via-pink-500 to-red-500' : 'bg-gray-100'}`}>
             <Sidebar />
-            <div className={`flex-1 min-w-[800px] p-6 ${theme === 'dark' ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-300'} border-l overflow-y-auto`}>
+            <div className={`flex-1 min-w-[800px] p-6 ${theme === 'colorful' ? 'bg-white border-black-300 shadow-lg' : 'bg-white border-gray-300'} border-l overflow-y-auto `}>
               {renderComponent()}
             </div>
           </div>
         </DashboardContext.Provider>
     </>
-
   );
 };
 

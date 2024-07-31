@@ -7,7 +7,6 @@ import Services from './components/Services';
 import { ContactUs } from './components/ContactUs';
 import Dashboard from './pages/Dashboard'; // Import your Dashboard component
 import ProtectedRoute from './components/ProtectedRoute';
-
 function App() {
   return (
     <BrowserRouter>

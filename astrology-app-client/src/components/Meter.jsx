@@ -17,10 +17,10 @@ const Meter = ({ value, label, description }) => {
   const progressColor = getColor(percentage);
 
   return (
-    <div className="mb-6 p-4 bg-gray-900 rounded-lg shadow-lg border border-gray-700">
+    <div className="mb-6 p-4 bg-gray-100 rounded-lg shadow-lg border border-gray-700">
       <div className="flex justify-between items-center mb-2">
-        <h4 className="text-xl font-semibold text-white">{label}</h4>
-        <span className="text-lg font-medium text-gray-300">{percentage}%</span>
+        <h4 className="text-xl font-semibold text-black">{label}</h4>
+        <span className="text-lg font-medium text-black">{percentage}%</span>
       </div>
       <div className="relative h-6 bg-gray-700 rounded-full overflow-hidden">
         <div
@@ -32,7 +32,7 @@ const Meter = ({ value, label, description }) => {
           }}
         />
       </div>
-      <p className="mt-2 text-white">{description}</p>
+      <p className="mt-2 text-black">{description}</p>
     </div>
   );
 };
