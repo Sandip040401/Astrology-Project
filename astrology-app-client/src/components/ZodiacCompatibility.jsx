@@ -6,18 +6,18 @@ import 'react-toastify/dist/ReactToastify.css';
 import Meter from './Meter';
 
 const zodiacSigns = [
-  { name: 'Aries', image: 'src/assets/zodiac/aries.png', dates: 'Mar 21 - Apr 19' },
-  { name: 'Taurus', image: 'src/assets/zodiac/taurus.png', dates: 'Apr 20 - May 20' },
-  { name: 'Gemini', image: 'src/assets/zodiac/gemini.png', dates: 'May 21 - Jun 20' },
-  { name: 'Cancer', image: 'src/assets/zodiac/cancer.png', dates: 'Jun 21 - Jul 22' },
-  { name: 'Leo', image: 'src/assets/zodiac/leo.png', dates: 'Jul 23 - Aug 22' },
-  { name: 'Virgo', image: 'src/assets/zodiac/virgo.png', dates: 'Aug 23 - Sep 22' },
-  { name: 'Libra', image: 'src/assets/zodiac/libra.png', dates: 'Sep 23 - Oct 22' },
-  { name: 'Scorpio', image: 'src/assets/zodiac/scorpio.png', dates: 'Oct 23 - Nov 21' },
-  { name: 'Sagittarius', image: 'src/assets/zodiac/sagittarius.png', dates: 'Nov 22 - Dec 21' },
-  { name: 'Capricorn', image: 'src/assets/zodiac/capricorn.png', dates: 'Dec 22 - Jan 19' },
-  { name: 'Aquarius', image: 'src/assets/zodiac/aquarius.png', dates: 'Jan 20 - Feb 18' },
-  { name: 'Pisces', image: 'src/assets/zodiac/pisces.png', dates: 'Feb 19 - Mar 20' }
+  { name: 'Aries', image: '/aries.png', dates: 'Mar 21 - Apr 19' },
+  { name: 'Taurus', image: '/taurus.png', dates: 'Apr 20 - May 20' },
+  { name: 'Gemini', image: '/gemini.png', dates: 'May 21 - Jun 20' },
+  { name: 'Cancer', image: '/cancer.png', dates: 'Jun 21 - Jul 22' },
+  { name: 'Leo', image: '/leo.png', dates: 'Jul 23 - Aug 22' },
+  { name: 'Virgo', image: '/virgo.png', dates: 'Aug 23 - Sep 22' },
+  { name: 'Libra', image: '/libra.png', dates: 'Sep 23 - Oct 22' },
+  { name: 'Scorpio', image: '/scorpio.png', dates: 'Oct 23 - Nov 21' },
+  { name: 'Sagittarius', image: '/sagittarius.png', dates: 'Nov 22 - Dec 21' },
+  { name: 'Capricorn', image: '/capricorn.png', dates: 'Dec 22 - Jan 19' },
+  { name: 'Aquarius', image: '/aquarius.png', dates: 'Jan 20 - Feb 18' },
+  { name: 'Pisces', image: '/pisces.png', dates: 'Feb 19 - Mar 20' }
 ];
 
 const ZodiacCompatibility = () => {
