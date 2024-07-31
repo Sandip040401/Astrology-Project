@@ -58,7 +58,6 @@ const Sidebar = () => {
             <span className="text-lg font-medium">Logout</span>
           </button>
         </li>
-          <div id="google_translate_element" className="ml-4"></div>
       </ul>
     </div>
   );

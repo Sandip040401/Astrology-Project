@@ -22,7 +22,7 @@ export function Footer() {
     <footer className="relative w-full py-6 relative bg-gradient-to-r from-gray-900 to-black text-white">
       <div className="mx-auto w-full max-w-7xl px-8">
         <div className="grid grid-cols-1 justify-between gap-4 md:grid-cols-2">
-          <Typography variant="body1" className="text-4xl mb-5">
+          <Typography variant="body1" className="text-4xl mb-5"style={{ fontFamily: "Kanit, sans-serif" }}>
             ASTROLOGY
           </Typography>
           <div className="grid grid-cols-3 justify-between gap-4">
