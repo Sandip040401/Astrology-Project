@@ -4,20 +4,32 @@ import { toast, ToastContainer } from 'react-toastify';
 import { Transition } from '@headlessui/react';
 import 'react-toastify/dist/ReactToastify.css';
 import Meter from './Meter';
+import aries from '../assets/zodiac/aries.png';
+import taurus from '../assets/zodiac/taurus.png';
+import gemini from '../assets/zodiac/gemini.png';
+import cancer from '../assets/zodiac/cancer.png';
+import leo from '../assets/zodiac/leo.png';
+import virgo from '../assets/zodiac/virgo.png';
+import libra from '../assets/zodiac/libra.png';
+import scorpio from '../assets/zodiac/scorpio.png';
+import sagittarius from '../assets/zodiac/sagittarius.png';
+import capricorn from '../assets/zodiac/capricorn.png';
+import aquarius from '../assets/zodiac/aquarius.png';
+import pisces from '../assets/zodiac/pisces.png';
 
 const zodiacSigns = [
-  { name: 'Aries', image: '/aries.png', dates: 'Mar 21 - Apr 19' },
-  { name: 'Taurus', image: '/taurus.png', dates: 'Apr 20 - May 20' },
-  { name: 'Gemini', image: '/gemini.png', dates: 'May 21 - Jun 20' },
-  { name: 'Cancer', image: '/cancer.png', dates: 'Jun 21 - Jul 22' },
-  { name: 'Leo', image: '/leo.png', dates: 'Jul 23 - Aug 22' },
-  { name: 'Virgo', image: '/virgo.png', dates: 'Aug 23 - Sep 22' },
-  { name: 'Libra', image: '/libra.png', dates: 'Sep 23 - Oct 22' },
-  { name: 'Scorpio', image: '/scorpio.png', dates: 'Oct 23 - Nov 21' },
-  { name: 'Sagittarius', image: '/sagittarius.png', dates: 'Nov 22 - Dec 21' },
-  { name: 'Capricorn', image: '/capricorn.png', dates: 'Dec 22 - Jan 19' },
-  { name: 'Aquarius', image: '/aquarius.png', dates: 'Jan 20 - Feb 18' },
-  { name: 'Pisces', image: '/pisces.png', dates: 'Feb 19 - Mar 20' }
+  { name: 'Aries', image: aries, dates: 'Mar 21 - Apr 19' },
+  { name: 'Taurus', image: taurus, dates: 'Apr 20 - May 20' },
+  { name: 'Gemini', image: gemini, dates: 'May 21 - Jun 20' },
+  { name: 'Cancer', image: cancer, dates: 'Jun 21 - Jul 22' },
+  { name: 'Leo', image: leo, dates: 'Jul 23 - Aug 22' },
+  { name: 'Virgo', image: virgo, dates: 'Aug 23 - Sep 22' },
+  { name: 'Libra', image: libra, dates: 'Sep 23 - Oct 22' },
+  { name: 'Scorpio', image: scorpio, dates: 'Oct 23 - Nov 21' },
+  { name: 'Sagittarius', image: sagittarius, dates: 'Nov 22 - Dec 21' },
+  { name: 'Capricorn', image: capricorn, dates: 'Dec 22 - Jan 19' },
+  { name: 'Aquarius', image: aquarius, dates: 'Jan 20 - Feb 18' },
+  { name: 'Pisces', image: pisces, dates: 'Feb 19 - Mar 20' }
 ];
 
 const ZodiacCompatibility = () => {
