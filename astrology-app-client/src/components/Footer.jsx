@@ -7,11 +7,7 @@ const LINKS = [
   },
   {
     title: "Our Services",
-    items: ["About", "Services", "Contact"],
-  },
-  {
-    title: "Quick Links",
-    items: ["Blog", "Newsletter", "Events", "Help center"],
+    items: ["About", "Contact"],
   },
 ];
  
@@ -25,7 +21,7 @@ export function Footer() {
           <Typography variant="body1" className="text-4xl mb-5"style={{ fontFamily: "Kanit, sans-serif" }}>
             ASTROLOGY
           </Typography>
-          <div className="grid grid-cols-3 justify-between gap-4">
+          <div className="grid grid-cols-3 justify-between gap-10 ml-32">
             {LINKS.map(({ title, items }) => (
               <ul key={title}>
                 <Typography

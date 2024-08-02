@@ -16,7 +16,6 @@ export default function Home(){
             <AstrologyComponent2/>
             <ZodiacSign/>
             <AstrologyExperience/>
-            <ZodiacForm/>
             <Footer/>
         </>
     )

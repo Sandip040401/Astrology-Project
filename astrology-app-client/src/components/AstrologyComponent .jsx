@@ -16,9 +16,9 @@ const AstrologyComponent = () => {
           <Link to='/'><button className="bg-blue-500 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300">
             Getting Started
           </button></Link>
-          <button className="bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-green-700 transition duration-300">
+          {/* <button className="bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-green-700 transition duration-300">
             Find Out More
-          </button>
+          </button> */}
         </div>
       </div>
       <div className="w-full lg:w-1/2 flex justify-center lg:justify-end mt-8 lg:mt-0">

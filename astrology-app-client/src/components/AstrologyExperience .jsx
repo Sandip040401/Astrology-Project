@@ -35,9 +35,9 @@ const AstrologyExperience = () => {
             </div>
         </div>
 
-        <button className="mt-10 bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-full transition duration-300">
+        {/* <button className="mt-10 bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-full transition duration-300">
           Read More
-        </button>
+        </button> */}
       </div>
 
       {/* <div className="absolute top-0 right-0 w-1/4 h-full hidden lg:block">

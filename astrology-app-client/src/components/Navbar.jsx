@@ -5,7 +5,6 @@ import { useEffect, useState } from 'react';
 
 const navigation = [
   { name: 'Home', href: '/home' },
-  { name: 'Services', href: '/services' },
   { name: 'Contact', href: '/contact' },
 ];
 
@@ -24,7 +23,7 @@ export const Navbar = () => {
   }, []);
 
   return (
-    <Disclosure as="nav" className="bg-gray-900">
+    <Disclosure as="nav" className="bg-gray-200">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -36,7 +35,7 @@ export const Navbar = () => {
           </div>
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex flex-shrink-0 items-center">
-              <Link to="/home" className="text-white text-xl"style={{ fontFamily: "Kanit, sans-serif" }}>
+              <Link to="/home" className="text-black text-xl"style={{ fontFamily: "Kanit, sans-serif" }}>
                 Astrology
               </Link>
             </div>
@@ -47,7 +46,7 @@ export const Navbar = () => {
                     key={item.name}
                     to={item.href}
                     className={classNames(
-                      location.pathname === item.href ? 'bg-yellow-500 text-white' : 'text-white hover:bg-gray-600',
+                      location.pathname === item.href ? 'bg-yellow-500 text-black' : 'text-black hover:bg-gray-600',
                       'rounded-md px-3 py-2 text-sm font-medium'
                     )}
                   >
