@@ -4,6 +4,6 @@ import auth from '../middlewares/authMiddleware.js';
 
 const router = express.Router();
 
-router.post('/',auth, matchKundli);
+router.post('/', matchKundli);
 
 export default router;

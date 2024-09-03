@@ -69,12 +69,12 @@ export const Navbar = () => {
                 </button>
               </Link>
             ) : (
-              <Link to="/">
+              <Link to="/dashboard">
                 <button
                   type="button"
                   className="text-white bg-green-500 hover:bg-green-600 rounded-lg px-4 py-2"
                 >
-                  Login
+                  Dashboard
                 </button>
               </Link>
             )}

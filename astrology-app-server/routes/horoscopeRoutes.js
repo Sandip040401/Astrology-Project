@@ -4,6 +4,6 @@ import auth from '../middlewares/authMiddleware.js';
 
 const router = express.Router();
 
-router.post('/generate', auth, generateHoroscope);
+router.post('/generate',  generateHoroscope);
 
 export default router;
